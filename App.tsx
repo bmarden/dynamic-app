@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import * as Application from 'expo-application';
+import { hello } from './modules/test-module';
 
 export default function App() {
   return (
