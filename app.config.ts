@@ -12,10 +12,11 @@ const getEnvVar = (name: string) => {
 const getBundleIdentifier = () => getEnvVar('BUNDLE_IDENTIFIER');
 const getIcon = () => getEnvVar('APP_ICON');
 const getAppName = () => getEnvVar('APP_NAME');
+const getAppSlug = () => getEnvVar('APP_SLUG');
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
-  name: 'dynamic-app',
+  name: getAppName(),
   slug: getAppName(),
   version: '1.0.0',
   orientation: 'portrait',
@@ -40,8 +41,6 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     package: getBundleIdentifier()
   },
   extra: {
-    config: {
-
-    }
+    config: {}
   }
 });

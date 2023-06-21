@@ -7,10 +7,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <Text style={{ fontSize: 20, fontWeight: 'bold' }}>
-        Bundle ID: {Application.applicationId}
-      </Text>
+      <Text style={styles.text}>Bundle ID: {Application.applicationId}</Text>
+      <Text style={styles.text}>Application Name: {Application.applicationName}</Text>
 
       <WebView
         style={{ flex: 0, width: 300, height: 300, borderColor: '#000', borderWidth: 1 }}
@@ -27,5 +25,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  text: {
+    fontSize: 20,
+    fontWeight: 'bold'
   }
 });
