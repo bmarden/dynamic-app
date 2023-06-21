@@ -17,5 +17,5 @@ web-build/
 .metro-health-check*
 
 # Build files
-ios
-android
+/ios/
+/android/
